@@ -1,0 +1,80 @@
+OOPs (object oriented programming):
+    object = A "bundle" of related attributes (variables) and methods (functions)
+        Ex. phone, cup, book 
+        you need a "class" to create many objects
+    
+    class = (blueprint) used to design the structure and layout of an object
+---------------------------------------------------------------------------------------------
+Advantages of OOP
+    Provides a clear structure to programs
+    Makes code easier to maintain, reuse, and debug
+    Helps keep your code DRY (Don't Repeat Yourself)
+    Allows you to build reusable applications with less code
+    Tip: The DRY principle means you should avoid writing the same code more than once. 
+    Move repeated code into functions or classes and reuse it.
+---------------------------------------------------------------------------------------------
+class variables = Shared among all instances of a class
+                  defined outside the constructor 
+                  allow you to share data among all objects created from that class 
+---------------------------------------------------------------------------------------------
+Inheritance = Allows a class to inherit attributes and methods from another class
+              Helps with code reusability and extensibility 
+              class Child(parent)
+
+multiple inheritance = inherit from more then one parent class
+                       c(A,B)
+
+multilevel inheritance = inherit from a parent which inherit from another parent 
+                         C(B) <- B(A) <- A
+---------------------------------------------------------------------------------------------
+Abstract class: A class that cannot be instantiated on its own; Meant to be sub classed.
+                They can contain abstract methods, which are declared but have no implementation.
+                Abstract class benefits:
+                1. Prevents instantiation of the class itself
+                2. Requires children to use inherited abstract methods
+---------------------------------------------------------------------------------------------
+super() = Function used in a child class to call methods from a parent class (superclass).
+          Allows you to extend the functionality of the inherited methods
+---------------------------------------------------------------------------------------------
+Polymorphism = Greek word that means to "have many forms or faces"
+               Poly = Many 
+               Morphe = Forms
+
+               TWO WAYS TO ACHIEVE POLYMORPHISM
+               1. Inheritance = An object could be treated of the same type as a parent class
+               2. "Duck typing" = Object must have necessary attributes/methods
+---------------------------------------------------------------------------------------------
+Duck typing = Another way to achieve Polymorphism besides Inheritance
+              Object must have the minimum necessary attributes/methods
+              "If it looks like a duck and quacks like a duck, it must be a duck. 
+---------------------------------------------------------------------------------------------
+Aggregation = Represents a relationship where one object (the whole)
+              contains reference to one or more Independent objects (the parts)
+---------------------------------------------------------------------------------------------
+Composition = The composed object directly owns its components, which cannot exits Independently
+              "owns-a" relationship
+---------------------------------------------------------------------------------------------
+Nested class = A class defined within another class
+                class Outer:
+                    class Inner:
+
+Benefits: Allows you to logically group classes that are closely related
+          Encapsulates private details that aren't relevant outside of the Outer class
+          Keeps the name space clean; reduces the possibility of naming conflicts
+---------------------------------------------------------------------------------------------
+Static methods = A method that belong to a class rather than any object from that class (instance)
+                  Usually used for general utility function
+
+Instance methods = Best for operations on instance of the class (objects)
+Static method = Best for utility functions that do not need access to class data
+---------------------------------------------------------------------------------------------
+Class methods = Allow operations related to the class itself
+                take (cls) as the first parameter, which represents the class itself
+---------------------------------------------------------------------------------------------
+Magic methods = Dunder methods (double underscore) __init__, __str__, __eq__
+                 They are automatically called by many of Python's built-in operations.
+                 They allow developers to define or customize the behavior of object 
+---------------------------------------------------------------------------------------------
+@property = Decorator used to define a method as a property (it can accessed like an attribute)
+            Benefits: Add additional logic when read, write, or delete attributes
+            Gives you getter, setter, and deleter method
